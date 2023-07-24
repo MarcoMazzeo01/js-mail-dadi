@@ -5,6 +5,7 @@ const msg = document.getElementById("result")
 
 let results = []
 const minNum = 1, maxNum = 6;
+let biggestNum;
 
 // userResult.style.display = "none";
 // computerResult.style.display = "none";
@@ -22,5 +23,15 @@ button.addEventListener("click",function (){
     results.push(randomInt(minNum,maxNum))
     results.push(randomInt(minNum,maxNum))
     console.table(results)
+
+
+   if (results[0] > results[1]) {
+    biggestNum = results[0]
+   } else {
+    biggestNum = results[1]
+   }
+
+   console.log(biggestNum)
+   results = []
 
 })

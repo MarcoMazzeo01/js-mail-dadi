@@ -19,7 +19,9 @@ button.addEventListener("click",function (){
     console.table(results)
 
 
-   if (results[0] > results[1]) {
+  if (results[0] == results[1]) {
+    msg.innerHTML = "Pareggio! Riprova di nuovo."
+  } else if (results[0] > results[1]) {
     biggestNum = results[0] //giocatore vince
     msg.innerHTML = "Hai vinto!"
    } else {

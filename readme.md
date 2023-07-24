@@ -18,5 +18,6 @@
 2. Dichiaro il numero minimo (1) e il numero massimo (6);
 3. Dichiaro la funzione per ottenere un numero intero random con la formula `Math.floor(Math.random() * (max - min + 1) ) + min`;
 4. Genero due numeri (primo è del giocatore, secondo è del computer), inserendoli nell'array vuoto precedentemente dichiarato.
-5. Se array[0] è più grande, allora vince il giocatore
+5. Se array[0] e array[1] sono uguali, allora pareggio e di' al giocatore di riprovare.
+    - Se array[0] è più grande, allora vince il giocatore.
     - Se array[1] è più grande invece, vince il computer.

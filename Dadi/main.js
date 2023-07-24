@@ -7,18 +7,12 @@ let results = []
 const minNum = 1, maxNum = 6;
 let biggestNum;
 
-// userResult.style.display = "none";
-// computerResult.style.display = "none";
-// msg.style.display = "none";
-
 function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
 
 
 button.addEventListener("click",function (){
-    //let userNum = randomInt(minNum,maxNum)
-
 
     results.push(randomInt(minNum,maxNum))
     results.push(randomInt(minNum,maxNum))
@@ -26,12 +20,18 @@ button.addEventListener("click",function (){
 
 
    if (results[0] > results[1]) {
-    biggestNum = results[0]
+    biggestNum = results[0] //giocatore vince
+    msg.innerHTML = "Hai vinto!"
    } else {
-    biggestNum = results[1]
+    biggestNum = results[1] // computer vince
+    msg.innerHTML = "Hai perso! :( Riprova, sarai più fortunato."
    }
 
    console.log(biggestNum)
-   results = []
+
+  userResult.innerHTML = "Il tuo dado: " + results[0]
+  computerResult.innerHTML = "Il dado dell'avversario: " + results[1]
+
+  results = []
 
 })
